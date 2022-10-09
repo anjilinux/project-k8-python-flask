@@ -1,0 +1,27 @@
+#deployment-definition.yml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webapp-deployment
+  namespace: flask-namespace
+  labels:
+    app: flask-webapp
+    type: front-end
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+     app: flask-webapp
+     type: front-end
+  template:
+    metadata:
+      labels:
+        app: flask-webapp
+        type: front-end
+    spec:
+     containers:
+     - name: bjwrd
+       image: bjwrd/app.py:latest
+       ports:
+       - containerPort: 8080
+         name: http-webapp-svc
