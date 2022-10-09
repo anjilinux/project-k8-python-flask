@@ -1,12 +1,10 @@
 # kubernetes-docker-python-flask
-Web application using Kubernetes, Docker and Python Flask.
-# kubernetes-simple-webapp
 This is a Python Flask web application using [K8s](https://kubernetes.io/), [Docker](https://www.docker.com/), [Python Flask](http://flask.pocoo.org/) and [NodePort](https://kubernetes.io/docs/concepts/services-networking/service/) as a service. 
 
 ## Architecture
 This K8s architecture consists of one Node and one Pods using Deployment and the NodePort service for external site accessibility. The Node will reside within the Namespace `flask-namespace` and the bulk of the configuration can be found within the `kubernetes-docker-python-flask.yml`.
 
-<img width="690" alt="image" src="https://user-images.githubusercontent.com/83971386/193107498-5da74aa9-64b3-4a70-92a9-c9d438e9866b.png">
+<img width="627" alt="image" src="https://user-images.githubusercontent.com/83971386/194745323-024095ca-8e8a-4f27-9482-ae5905dd556f.png">
 
 ## Build Process
 This section details the steps required to deploy your own docker image onto Kubernetes.
@@ -76,7 +74,7 @@ This section details the deployment and teardown of the kubernetes-docker-python
 ### 5. Verify the Minikube's external IP address and service list
      minikube ip
      minikube service list
-<img width="583" alt="image" src="https://user-images.githubusercontent.com/83971386/193108264-210fc8f2-f661-4897-ae40-3f5986fa65ce.png">
+<img width="610" alt="image" src="https://user-images.githubusercontent.com/83971386/194745134-8f899ab9-3afa-4491-b0be-d96033f8759e.png">
 
 ### 6. Test site accessibility
 
